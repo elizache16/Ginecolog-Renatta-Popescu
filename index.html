@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Renatta Popescu - Medic Ginecolog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="language-selector">
+            <img src="flag-ro.jpg" alt="Română" data-lang="ro">
+            <img src="flag-hu.jpg" alt="Magyar" data-lang="hu">
+            <img src="flag-en.jpg" alt="English" data-lang="en">
+            <img src="flag-fr.jpg" alt="Français" data-lang="fr">
+        </div>
+    </header>
+
+    <main>
+        <section class="profile">
+            <div class="profile-container">
+                <img src="renatta-popescu.jpg" alt="Dr. Renatta Popescu" class="profile-image">
+                <div class="profile-text">
+                    <h1 class="lang" data-text="title">Dr. Renatta Popescu - Medic Ginecolog</h1>
+                    <p class="lang" data-text="description">Dr. Renatta Popescu este medic primar ginecolog cu peste 15
+                        ani de
+                        experiență...</p>
+                    <p class="quote lang" data-text="quote">"Fiecare femeie merită să fie ascultată și înțeleasă."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2 class="lang" data-text="services">Servicii oferite:</h2>
+            <ul>
+                <li class="lang" data-text="service1">Consultații ginecologice</li>
+                <li class="lang" data-text="service2">Ecografii abdominale și transvaginale</li>
+                <li class="lang" data-text="service3">Monitorizarea sarcinii</li>
+                <li class="lang" data-text="service4">Planificare familială</li>
+                <li class="lang" data-text="service5">Tratamentul afecțiunilor ginecologice</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2 class="lang" data-text="contact">Contact</h2>
+            <div class="contact-info">
+                <p class="phone-number">
+                    <a href="tel:+40728975527" class="contact-link">
+                        <i class="fas fa-phone"></i> +40 728 975 527
+                    </a>
+                </p>
+                <p class="whatsapp-number">
+                    <a href="https://wa.me/40728975527" class="contact-link whatsapp-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </p>
+                <p class="email">
+                    <a href="mailto:Larisa.topor@gmail.com" class="contact-link email-link">
+                        <i class="fas fa-envelope"></i> Larisa.topor@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-methods">
+                <h3 class="lang" data-text="booking_methods">Modalități de programare:</h3>
+                <ul>
+                    <li>Prin telefon: Luni-Vineri 09:00-17:00</li>
+                    <li>Prin WhatsApp: 24/7 - vom răspunde în cel mai scurt timp</li>
+                    <li>Prin email: 24/7 - vom răspunde în cel mai scurt timp</li>
+                    <li>Prin formularul de mai jos</li>
+                </ul>
+            </div>
+
+            <form id="appointment-form" action="https://formspree.io/f/xxxxxxxxxxxx" method="POST">
+                <h3 class="lang" data-text="booking_form">Formular de programare</h3>
+                <input type="text" name="name" class="lang-placeholder" data-placeholder="name"
+                    placeholder="Nume complet" required>
+                <input type="email" name="_replyto" class="lang-placeholder" data-placeholder="email"
+                    placeholder="Email" required>
+                <input type="tel" name="phone" class="lang-placeholder" data-placeholder="phone" placeholder="Telefon"
+                    required>
+                <input type="hidden" name="_subject" value="Nouă programare">
+                <input type="hidden" name="_next" value="https://username.github.io/ginecolog-larisa">
+                <select name="service" class="lang-placeholder" data-placeholder="service" required>
+                    <option value="">Selectați serviciul dorit</option>
+                    <option value="consultatie">Consultații ginecologice</option>
+                    <option value="ecografie">Ecografii abdominale și transvaginale</option>
+                    <option value="monitorizare">Monitorizarea sarcinii</option>
+                    <option value="planificare">Planificare familială</option>
+                    <option value="tratament">Tratamentul afecțiunilor ginecologice</option>
+                </select>
+                <div class="preferred-date">
+                    <label for="date">Data preferată:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="preferred-time">
+                    <label for="time">Ora preferată:</label>
+                    <select id="time" name="time" required>
+                        <option value="">Selectați intervalul orar</option>
+                        <option value="09:00">09:00 - 10:00</option>
+                        <option value="10:00">10:00 - 11:00</option>
+                        <option value="11:00">11:00 - 12:00</option>
+                        <option value="12:00">12:00 - 13:00</option>
+                        <option value="14:00">14:00 - 15:00</option>
+                        <option value="15:00">15:00 - 16:00</option>
+                        <option value="16:00">16:00 - 17:00</option>
+                    </select>
+                </div>
+                <textarea class="lang-placeholder" data-placeholder="message" placeholder="Mesaj" required></textarea>
+                <button type="submit" class="lang" data-text="submit">Trimite programarea</button>
+            </form>
+        </section>
+
+        <section class="location">
+            <h2 class="lang" data-text="location">Locația clinicii</h2>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.593747269518!2d27.180000!3d45.700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b6dee6c75d34a7%3A0x8b8b8b8b8b8b8b8b!2sStrada%20Ion%20Creang%C4%83%2011%2C%20Foc%C8%99ani!5e0!3m2!1sro!2sro!4v1620000000000!5m2!1sro!2sro"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dr. Renatta Popescu</p>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
