@@ -177,7 +177,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 2rem;
     background-color: white;
@@ -188,20 +188,21 @@ form {
 form h3 {
     text-align: center;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
-input,
-textarea {
+input {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-textarea {
-    min-height: 150px;
-    resize: vertical;
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
 }
 
 button {
@@ -214,9 +215,14 @@ button {
     transition: background-color 0.2s;
     font-size: 1rem;
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 button:hover {
+    background-color: var(--accent-color);
+}
+
+button[type="submit"]:hover {
     background-color: var(--accent-color);
 }
 
@@ -270,6 +276,21 @@ footer {
     margin-top: 2rem;
 }
 
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
 /* Media Queries pentru responsivitate */
 @media (max-width: 768px) {
     .profile-container {
@@ -316,3 +337,37 @@ footer {
 
 /* Adăugăm Font Awesome pentru iconițe */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Stilizare pentru containerul Calendly */
+.calendly-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendly-inline-widget {
+    margin: 0 auto;
+}
+
+/* Responsive design pentru Calendly */
+@media (max-width: 768px) {
+    .calendly-container {
+        padding: 0.5rem;
+    }
+
+    .calendly-inline-widget {
+        height: 600px !important;
+    }
+}
+
+.form-success {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    text-align: center;
+}
