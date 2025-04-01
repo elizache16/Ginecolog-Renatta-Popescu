@@ -1,8 +1,9 @@
-const translations = {
+window.translations = {
     ro: {
         title: "DR. Renatta Popescu - Medic primar Obstetrica - Ginecologie",
         description: "Dr. Renatta Popescu este medic primar ginecolog cu peste 15 ani de experiență...",
-        quote: "Fiecare femeie merită să fie ascultată și înțeleasă.",
+        about_quote: "Am ales medicina pentru că fiecare femeie merită să fie ascultată și sprijinită cu blândețe și știință.",
+        about_paragraph: "Sunt Dr. Renatta Popescu și cred că între pacient și medic trebuie să existe nu doar profesionalism, ci și un fir de încredere, construit cu delicatețe.",
         services: "Servicii oferite:",
         service1: "Consultații ginecologice",
         service2: "Tratamentul medicamentos sau chirurgical al afecțiunilor ginecologice",
@@ -13,17 +14,13 @@ const translations = {
         service7: "Tehnici de reproducere umană asistată",
         contact: "Contact",
         booking_methods: "Modalități de programare:",
-        location: "Locația clinicii",
-        submit: "Trimite programarea",
-        name: "Nume complet",
-        email: "Email",
-        phone: "Telefon",
-        message: "Mesaj"
+        location: "Locația clinicii"
     },
     hu: {
         title: "DR. Renatta Popescu - Szülész-nőgyógyász szakorvos",
         description: "Dr. Renatta Popescu több mint 15 éves tapasztalattal rendelkező nőgyógyász szakorvos...",
-        quote: "Minden nő megérdemli, hogy meghallgassák és megértsék.",
+        about_quote: "Az orvoslást azért választottam, mert minden nő megérdemli, hogy meghallgassák és gyengéden, tudományos alapon támogassák.",
+        about_paragraph: "Dr. Renatta Popescu vagyok, és hiszem, hogy az orvos és a beteg kapcsolatának nem csak szakmaiságon, hanem bizalmon és gyengédségen is kell alapulnia.",
         services: "Szolgáltatások:",
         service1: "Nőgyógyászati vizsgálatok",
         service2: "Nőgyógyászati betegségek gyógyszeres vagy műtéti kezelése",
@@ -34,17 +31,13 @@ const translations = {
         service7: "Asszisztált reprodukciós technikák",
         contact: "Kapcsolat",
         booking_methods: "Időpontfoglalási módok:",
-        location: "Rendelő címe",
-        submit: "Időpontfoglalás küldése",
-        name: "Teljes név",
-        email: "Email",
-        phone: "Telefon",
-        message: "Üzenet"
+        location: "Rendelő címe"
     },
     en: {
         title: "DR. Renatta Popescu - Senior Consultant in Obstetrics and Gynecology",
         description: "Dr. Renatta Popescu is a senior consultant gynecologist with over 15 years of experience...",
-        quote: "Every woman deserves to be heard and understood.",
+        about_quote: "\"I chose medicine because every woman deserves to be heard and supported with gentleness and science.\"",
+        about_paragraph: "I am Dr. Renatta Popescu and I believe that the relationship between patient and doctor should be built not only on professionalism but also on trust, built with delicacy.",
         services: "Services:",
         service1: "Gynecological consultations",
         service2: "Medical or surgical treatment of gynecological conditions",
@@ -55,17 +48,13 @@ const translations = {
         service7: "Assisted human reproduction techniques",
         contact: "Contact",
         booking_methods: "Booking methods:",
-        location: "Clinic location",
-        submit: "Send appointment request",
-        name: "Full name",
-        email: "Email",
-        phone: "Phone",
-        message: "Message"
+        location: "Clinic location"
     },
     fr: {
         title: "DR. Renatta Popescu - Médecin spécialiste en Obstétrique et Gynécologie",
         description: "Dr. Renatta Popescu est gynécologue spécialiste avec plus de 15 ans d'expérience...",
-        quote: "Chaque femme mérite d'être écoutée et comprise.",
+        about_quote: "« J'ai choisi la médecine car chaque femme mérite d'être écoutée et soutenue avec douceur et science. »",
+        about_paragraph: "Je suis Dr. Renatta Popescu et je crois que la relation entre patient et médecin doit être construite non seulement sur le professionnalisme, mais aussi sur la confiance, établie avec délicatesse.",
         services: "Services proposés:",
         service1: "Consultations gynécologiques",
         service2: "Traitement médical ou chirurgical des affections gynécologiques",
@@ -76,11 +65,6 @@ const translations = {
         service7: "Techniques de reproduction assistée",
         contact: "Contact",
         booking_methods: "Méthodes de prise de rendez-vous:",
-        location: "Emplacement de la clinique",
-        submit: "Envoyer la demande de rendez-vous",
-        name: "Nom complet",
-        email: "Email",
-        phone: "Téléphone",
-        message: "Message"
+        location: "Emplacement de la clinique"
     }
 }; 

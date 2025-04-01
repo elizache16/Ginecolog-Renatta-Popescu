@@ -383,3 +383,11 @@ footer {
     border-radius: 4px;
     text-align: center;
 }
+
+.about-text {
+    color: #4CAF50;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 780px;
+    font-style: italic;
+}

@@ -1,53 +1,64 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const languageSelector = document.querySelector('.language-selector');
-
-    // Setează limba implicită
-    let currentLang = 'ro';
-
-    // Funcția de traducere
-    function translatePage(lang) {
-        currentLang = lang;
-
-        // Traduce elementele cu clasa 'lang'
-        document.querySelectorAll('.lang').forEach(element => {
-            const key = element.getAttribute('data-text');
-            if (translations[lang][key]) {
-                element.textContent = translations[lang][key];
-            }
-        });
-
-        // Traduce placeholder-urile
-        document.querySelectorAll('.lang-placeholder').forEach(element => {
-            const key = element.getAttribute('data-placeholder');
-            if (translations[lang][key]) {
-                element.placeholder = translations[lang][key];
-            }
-        });
-
-        // Actualizează atributul lang al documentului
-        document.documentElement.lang = lang;
+document.addEventListener('DOMContentLoaded', function () {
+    // Verificăm dacă translations există
+    if (typeof window.translations === 'undefined') {
+        console.error('translations nu este definit!');
+        return;
     }
 
-    // Event listeners pentru steaguri
-    languageSelector.addEventListener('click', (e) => {
-        if (e.target.tagName === 'IMG') {
-            const lang = e.target.getAttribute('data-lang');
-            translatePage(lang);
+    // Debug - afișăm obiectul translations
+    console.log('Obiectul translations:', window.translations);
+
+    // Selectăm toate imaginile steagurilor
+    const languageFlags = document.querySelectorAll('.language-selector img');
+    console.log('Steaguri găsite:', languageFlags.length);
+
+    // Funcția pentru schimbarea limbii
+    function changeLanguage(lang) {
+        console.log('Schimbare limbă în:', lang);
+
+        // Verificăm dacă limba există
+        if (!window.translations[lang]) {
+            console.error('Limba', lang, 'nu există în translations');
+            return;
         }
+
+        document.querySelectorAll('.lang').forEach(element => {
+            const key = element.getAttribute('data-text');
+            console.log('Element:', element);
+            console.log('Cheie:', key);
+            console.log('Valoare găsită:', window.translations[lang][key]);
+
+            if (window.translations[lang] && window.translations[lang][key]) {
+                if (element.tagName === 'INPUT') {
+                    element.placeholder = window.translations[lang][key];
+                } else {
+                    element.textContent = window.translations[lang][key];
+                }
+            }
+        });
+    }
+
+    // Adăugăm event listeners pentru fiecare steag
+    languageFlags.forEach(flag => {
+        flag.addEventListener('click', function () {
+            const lang = this.getAttribute('data-lang');
+            console.log('Steag click:', lang);
+            changeLanguage(lang);
+        });
     });
 
-    // Inițializează pagina în română
-    translatePage('ro');
+    // Setăm limba implicită la română
+    changeLanguage('ro');
 });
 
-document.getElementById('appointment-form').addEventListener('submit', function(e) {
+document.getElementById('appointment-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     // Afișăm un mesaj de așteptare
     const button = this.querySelector('button');
     const originalText = button.textContent;
     button.textContent = 'Se trimite...';
-    
+
     fetch(this.action, {
         method: 'POST',
         body: new FormData(this),
@@ -55,18 +66,18 @@ document.getElementById('appointment-form').addEventListener('submit', function(
             'Accept': 'application/json'
         }
     })
-    .then(response => {
-        if (response.ok) {
-            alert('Solicitarea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.');
-            this.reset();
-        } else {
+        .then(response => {
+            if (response.ok) {
+                alert('Solicitarea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.');
+                this.reset();
+            } else {
+                alert('A apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați telefonic.');
+            }
+        })
+        .catch(error => {
             alert('A apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați telefonic.');
-        }
-    })
-    .catch(error => {
-        alert('A apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați telefonic.');
-    })
-    .finally(() => {
-        button.textContent = originalText;
-    });
+        })
+        .finally(() => {
+            button.textContent = originalText;
+        });
 }); 
