@@ -40,23 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
     translatePage('ro');
 });
 
-document.getElementById('appointment-form').addEventListener('submit', function (e) {
+document.getElementById('appointment-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    fetch('process-form.php', {
+    
+    // Afișăm un mesaj de așteptare
+    const button = this.querySelector('button');
+    const originalText = button.textContent;
+    button.textContent = 'Se trimite...';
+    
+    fetch(this.action, {
         method: 'POST',
-        body: new FormData(this)
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert(data.message);
-                this.reset();
-            } else {
-                alert(data.message);
-            }
-        })
-        .catch(error => {
+    .then(response => {
+        if (response.ok) {
+            alert('Solicitarea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.');
+            this.reset();
+        } else {
             alert('A apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați telefonic.');
-        });
+        }
+    })
+    .catch(error => {
+        alert('A apărut o eroare. Vă rugăm să încercați din nou sau să ne contactați telefonic.');
+    })
+    .finally(() => {
+        button.textContent = originalText;
+    });
 }); 

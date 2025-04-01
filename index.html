@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DR. Renatta Popescu - Medic primar Obstetrica -Ginecologie</title>
+    <title>DR. Renatta Popescu - Medic primar Obstetrica</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -22,9 +22,9 @@
     <main>
         <section class="profile">
             <div class="profile-container">
-                <img src="renatta-popescu.jpg" alt="Dr. Renatta Popescu" class="profile-image">
+                <img src="renatta-popescu.jpg" alt="DR. Renatta Popescu" class="profile-image">
                 <div class="profile-text">
-                    <h1 class="lang" data-text="title">DR. Renatta Popescu - Medic primar Obstetrica -Ginecologie</h1>
+                    <h1 class="lang" data-text="title">DR. Renatta Popescu - Medic primar Obstetrica</h1>
                     <p class="lang" data-text="description">Dr. Renatta Popescu este medic primar ginecolog cu peste 15
                         ani de
                         experiență...</p>
@@ -37,10 +37,13 @@
             <h2 class="lang" data-text="services">Servicii oferite:</h2>
             <ul>
                 <li class="lang" data-text="service1">Consultații ginecologice</li>
-                <li class="lang" data-text="service2">Ecografii abdominale și transvaginale</li>
-                <li class="lang" data-text="service3">Monitorizarea sarcinii</li>
-                <li class="lang" data-text="service4">Planificare familială</li>
-                <li class="lang" data-text="service5">Tratamentul afecțiunilor ginecologice</li>
+                <li class="lang" data-text="service2">Tratamentul medicamentos sau chirurgical al afecțiunilor
+                    ginecologice</li>
+                <li class="lang" data-text="service3">Ecografii abdominale, transvaginale, mamare și de sarcină</li>
+                <li class="lang" data-text="service4">Monitorizarea sarcinii și nașteri</li>
+                <li class="lang" data-text="service5">Planificare familială</li>
+                <li class="lang" data-text="service6">Tratamentul infertilității de cuplu</li>
+                <li class="lang" data-text="service7">Tehnici de reproducere umană asistată</li>
             </ul>
         </section>
 
@@ -70,47 +73,29 @@
                     <li>Prin telefon: Luni-Vineri 09:00-17:00</li>
                     <li>Prin WhatsApp: 24/7 - vom răspunde în cel mai scurt timp</li>
                     <li>Prin email: 24/7 - vom răspunde în cel mai scurt timp</li>
-                    <li>Prin formularul de mai jos</li>
+                    <li>Prin formularul simplu de mai jos</li>
                 </ul>
             </div>
 
-            <form id="appointment-form" action="https://formspree.io/f/xxxxxxxxxxxx" method="POST">
-                <h3 class="lang" data-text="booking_form">Formular de programare</h3>
-                <input type="text" name="name" class="lang-placeholder" data-placeholder="name"
-                    placeholder="Nume complet" required>
-                <input type="email" name="_replyto" class="lang-placeholder" data-placeholder="email"
-                    placeholder="Email" required>
-                <input type="tel" name="phone" class="lang-placeholder" data-placeholder="phone" placeholder="Telefon"
-                    required>
-                <input type="hidden" name="_subject" value="Nouă programare">
-                <input type="hidden" name="_next" value="https://username.github.io/ginecolog-larisa">
-                <select name="service" class="lang-placeholder" data-placeholder="service" required>
-                    <option value="">Selectați serviciul dorit</option>
-                    <option value="consultatie">Consultații ginecologice</option>
-                    <option value="ecografie">Ecografii abdominale și transvaginale</option>
-                    <option value="monitorizare">Monitorizarea sarcinii</option>
-                    <option value="planificare">Planificare familială</option>
-                    <option value="tratament">Tratamentul afecțiunilor ginecologice</option>
-                </select>
-                <div class="preferred-date">
-                    <label for="date">Data preferată:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="preferred-time">
-                    <label for="time">Ora preferată:</label>
-                    <select id="time" name="time" required>
-                        <option value="">Selectați intervalul orar</option>
-                        <option value="09:00">09:00 - 10:00</option>
-                        <option value="10:00">10:00 - 11:00</option>
-                        <option value="11:00">11:00 - 12:00</option>
-                        <option value="12:00">12:00 - 13:00</option>
-                        <option value="14:00">14:00 - 15:00</option>
-                        <option value="15:00">15:00 - 16:00</option>
-                        <option value="16:00">16:00 - 17:00</option>
-                    </select>
-                </div>
-                <textarea class="lang-placeholder" data-placeholder="message" placeholder="Mesaj" required></textarea>
-                <button type="submit" class="lang" data-text="submit">Trimite programarea</button>
+            <form id="appointment-form" class="contact-form" action="https://formspree.io/f/xnnpbkjq" method="POST">
+                <h3>Solicitare Programare</h3>
+                <input type="text" name="name" placeholder="Numele dumneavoastră" required>
+                <input type="tel" name="phone" placeholder="Număr de telefon" required>
+                <input type="email" name="_replyto" placeholder="Adresa dumneavoastră de email" required>
+                <input type="hidden" name="_autoresponse" value="RO: Vă mulțumim pentru încrederea acordată. Cererea dvs. de programare a fost primită și vom reveni în cel mai scurt timp. Pentru urgențe, ne puteți contacta direct prin telefon sau WhatsApp: +40 728 975 527.
+
+                EN: Thank you for your trust. Your appointment request has been received and we will contact you shortly. For urgent matters, feel free to call or message us via WhatsApp: +40 728 975 527.
+
+                HU: Köszönjük bizalmát. Időpontkérését megkaptuk, hamarosan jelentkezünk. Sürgős esetben hívjon vagy írjon nekünk WhatsApp-on: +40 728 975 527.
+
+                FR: Merci pour votre confiance. Votre demande de rendez-vous a bien été reçue. Nous vous contacterons très bientôt. En cas d'urgence, vous pouvez nous joindre par téléphone ou WhatsApp : +40 728 975 527.
+
+                Cu stimă, / With respect, / Sincèrement, / Tisztelettel,
+                Dr. Renatta Popescu">
+                <input type="hidden" name="_subject" value="Nouă solicitare de programare">
+                <input type="hidden" name="_cc" value="Larisa.topor@gmail.com,elizamarinica@hotmail.com">
+                <input type="hidden" name="_next" value="https://elizache16.github.io/ginecolog-larisa">
+                <button type="submit">Solicită programare</button>
             </form>
         </section>
 
@@ -125,7 +110,19 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Dr. Renatta Popescu</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://elizache16.github.io/ginecolog-larisa"
+                target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@dr.renattapopescu" target="_blank" class="social-link">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/dr.renattapopescu" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 DR. Renatta Popescu</p>
     </footer>
 
     <script src="translations.js"></script>
