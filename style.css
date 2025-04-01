@@ -69,6 +69,13 @@ header {
     text-align: center;
 }
 
+h1.lang {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
 .quote {
     font-style: italic;
     color: var(--primary-color);
@@ -332,6 +339,11 @@ footer {
     .preferred-date label,
     .preferred-time label {
         margin-bottom: 0.5rem;
+    }
+
+    h1.lang {
+        font-size: 1.4rem;
+        white-space: normal;
     }
 }
 
