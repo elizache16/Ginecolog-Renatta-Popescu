@@ -33,8 +33,9 @@
                 <img src="renatta-popescu.jpg" alt="DR. Renatta Popescu" class="profile-image">
                 <div class="profile-text">
                     <h1 class="lang" data-text="title">DR. Renatta Popescu - Medic primar Obstetrica - Ginecologie</h1>
-                    <p class="lang" data-text="description">Dr. Renatta Popescu este medic primar ginecolog cu peste 15
-                        ani de experiență...</p>
+                    <p class="lang" data-text="description">Dr. Renatta Popescu este medic primar ginecologie si medic
+                        primar medicina de laborator cu peste 20 de ani de experienta medicala clinica, de laborator si
+                        imagistica.</p>
                     <blockquote class="lang about-text" data-text="about_quote">
                         Am ales medicina pentru că fiecare femeie merită să fie ascultată și sprijinită cu blândețe și
                         știință.
@@ -85,18 +86,21 @@
             <div class="contact-methods">
                 <h3 class="lang" data-text="booking_methods">Modalități de programare:</h3>
                 <ul>
-                    <li>Prin telefon: Luni-Vineri 09:00-17:00</li>
-                    <li>Prin WhatsApp: 24/7 - vom răspunde în cel mai scurt timp</li>
-                    <li>Prin email: 24/7 - vom răspunde în cel mai scurt timp</li>
-                    <li>Prin formularul simplu de mai jos</li>
+                    <li class="lang" data-text="phone_booking">Prin telefon: Luni-Vineri 09:00-17:00</li>
+                    <li class="lang" data-text="whatsapp_booking">Prin WhatsApp: 24/7 - vom răspunde în cel mai scurt
+                        timp</li>
+                    <li class="lang" data-text="email_booking">Prin email: 24/7 - vom răspunde în cel mai scurt timp
+                    </li>
+                    <li class="lang" data-text="form_booking">Prin formularul simplu de mai jos</li>
                 </ul>
             </div>
 
             <form id="appointment-form" class="contact-form" action="https://formspree.io/f/xnnpbkjq" method="POST">
-                <h3>Solicitare Programare</h3>
-                <input type="text" name="name" placeholder="Numele dumneavoastră" required>
-                <input type="tel" name="phone" placeholder="Număr de telefon" required>
-                <input type="email" name="_replyto" placeholder="Adresa dumneavoastră de email" required>
+                <h2 class="lang" data-text="booking_form_title">Solicitare Programare</h2>
+                <input type="text" class="lang" data-text="your_name" placeholder="Numele dumneavoastră" required>
+                <input type="tel" class="lang" data-text="your_phone" placeholder="Număr de telefon" required>
+                <input type="email" class="lang" data-text="your_email" placeholder="Adresa dumneavoastră de email"
+                    required>
                 <input type="hidden" name="_autoresponse" value="RO: Vă mulțumim pentru încrederea acordată. Cererea dvs. de programare a fost primită și vom reveni în cel mai scurt timp. Pentru urgențe, ne puteți contacta direct prin telefon sau WhatsApp: +40 728 975 527.
 
                 EN: Thank you for your trust. Your appointment request has been received and we will contact you shortly. For urgent matters, feel free to call or message us via WhatsApp: +40 728 975 527.
@@ -110,7 +114,7 @@
                 <input type="hidden" name="_subject" value="Nouă solicitare de programare">
                 <input type="hidden" name="_cc" value="Larisa.topor@gmail.com,elizamarinica@hotmail.com">
                 <input type="hidden" name="_next" value="https://elizache16.github.io/ginecolog-larisa">
-                <button type="submit">Solicită programare</button>
+                <button type="submit" class="lang" data-text="submit_booking">Solicită programare</button>
             </form>
         </section>
 
