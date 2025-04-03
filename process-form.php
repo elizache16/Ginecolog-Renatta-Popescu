@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST['time'];
     $message = $_POST['message'];
 
-    $to = "Larisa.topor@gmail.com";
+    $to = "renattapopescu@gmail.com";
     $subject = "Nouă programare de la: " . $name;
     
     $email_content = "Detalii programare:\n\n";
